@@ -57,8 +57,6 @@ public interface PortGroupResource
      * @param portGroup 【必选】创建端口组请求。
      * @return {@code FCSDKResponse<CreatePortGroupResp>} 创建端口组响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<CreatePortGroupResp> createPortGroup(String dvswitchUri, PortGroup portGroup);
     
@@ -71,8 +69,6 @@ public interface PortGroupResource
      * @param portGroupUri 【必选】端口组标识。
      * @return {@code FCSDKResponse<PortGroup>} 查询DVSwitch下指定的端口组响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<PortGroup> queryPortGroup(String portGroupUri);
     
@@ -90,8 +86,6 @@ public interface PortGroupResource
      * @param vxlan 【可选】 支持vxlanId模糊查询，值只能为数字不能为null或""。
      * @return {@code FCSDKResponse<PageList<PortGroup>>} 查询指定DVSwitch下所有的端口组响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<PageList<PortGroup>> queryPortGroups(String dvswitchUri, Integer offset, Integer limit,
         String portGroupName, String vlan, String vxlan);
@@ -110,8 +104,6 @@ public interface PortGroupResource
      * @param queryAllSitePortGroupsReq 【必选】查询站点内的端口组请求
      * @return {@code FCSDKResponse<PageList<PortGroup>>} 查询站点内的端口组响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<PageList<PortGroup>> queryAllSitePortGroups(String siteUri,
         QueryAllSitePortGroupsReq queryAllSitePortGroupsReq);
@@ -141,8 +133,6 @@ public interface PortGroupResource
      * @param portGroup 【必选】端口组信息。
      * @return {@code FCSDKResponse<VRMTask>} 更新端口组响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> modifyPortGroup(String portGroupUri, PortGroup portGroup);
     
@@ -155,8 +145,6 @@ public interface PortGroupResource
      * @param portGroupUri  【必选】端口组标识。
      * @return {@code FCSDKResponse<VRMTask>} 删除端口组响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> removeGroup(String portGroupUri);
     

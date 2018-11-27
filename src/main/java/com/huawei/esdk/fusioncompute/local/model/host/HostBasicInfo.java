@@ -126,7 +126,7 @@ public class HostBasicInfo
     private List<String> attachedISOVMs;
     
     /**
-     * 查询该主机计算资源的uri地址，格式：< host_uri>/computeResourceStatics，例如：/service/sites/2DEF0634/hosts/65/computeResourceStatics。
+     * 查询该主机计算资源的uri地址，格式：&lt;host_uri&gt;/computeResourceStatics，例如：/service/sites/2DEF0634/hosts/65/computeResourceStatics。
      */
     private String computeResourceStatics;
     

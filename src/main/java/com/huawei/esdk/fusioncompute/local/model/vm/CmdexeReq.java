@@ -20,7 +20,7 @@ public class CmdexeReq
 	 * &nbsp;&nbsp;&nbsp;&nbsp; windows 虚拟机中，仅支持扩展名为.bat .vbs .psl的脚本文件名<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; linux虚拟机中，仅支持扩展名为.sh .py .pl的脚本文件名<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; 传入参数必须为标准化文件名，子目录格式、相对目录格式、命令连接符等非标准输入无效<br>
-	 * &nbsp;&nbsp;&nbsp;&nbsp; 文件名不能出现 “<”、“>”、“\”、“/”、“..”、“&”、"|"、空格“ ”、";"、“$”
+	 * &nbsp;&nbsp;&nbsp;&nbsp; 文件名不能出现 “&lt;”、“&gt;”、“\”、“/”、“..”、“&amp;”、“|”、“空格”、“;”、“$”
 	 */
 	private String cmdFile;
 

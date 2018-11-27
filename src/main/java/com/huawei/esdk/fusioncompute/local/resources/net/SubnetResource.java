@@ -56,8 +56,6 @@ public interface SubnetResource
      * @param subnet 【必选】子网信息。
      * @return {@code FCSDKResponse<CreateSubnetResp>} 创建子网响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<CreateSubnetResp> createSubnet(String siteUri, Subnet subnet);
     
@@ -70,8 +68,6 @@ public interface SubnetResource
      * @param subnetUri 【必选】子网Uri 。
      * @return {@code FCSDKResponse<Subnet>} 查询指定子网信息响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<Subnet> querySubnet(String subnetUri);
     
@@ -87,8 +83,6 @@ public interface SubnetResource
      * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （保留属性，受限商用）。
      * @return {@code FCSDKResponse<List<Subnet>>} 查询所有子网信息响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<List<Subnet>> queryAllSubnets(String siteUri, Integer type);
     
@@ -104,8 +98,6 @@ public interface SubnetResource
      * @param subnet    【必选】子网信息。
      * @return {@code FCSDKResponse<VRMTask>} 更新子网信息响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> modifySubnet(String subnetUri, Subnet subnet);
     
@@ -118,8 +110,6 @@ public interface SubnetResource
      * @param subnetUri 【必选】子网URI 。
      * @return {@code FCSDKResponse<VRMTask>} 删除指定子网地址池信息响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> removeSubnet(String subnetUri);
 }

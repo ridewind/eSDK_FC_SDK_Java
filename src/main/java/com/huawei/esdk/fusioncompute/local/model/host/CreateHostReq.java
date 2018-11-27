@@ -46,12 +46,12 @@ public class CreateHostReq {
 	private String bmcIp;
 
 	/**
-	 * 【可选】BMC帐号，长度[0, 64]，不支持以下字符：&|;<>-/$。
+	 * 【可选】BMC帐号，长度[0, 64]，不支持以下字符：&amp;|;&lt;&gt;-/$。
 	 */
 	private String bmcUserName;
 
 	/**
-	 * 【可选】BMC密码，长度[0, 64]，不支持以下字符：&|;<>-/$。
+	 * 【可选】BMC密码，长度[0, 64]，不支持以下字符：&amp;|;&lt;&gt;-/$。
 	 */
 	private String bmcPassword;
 

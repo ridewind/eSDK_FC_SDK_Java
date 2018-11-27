@@ -60,8 +60,6 @@ public interface BackupOperationResource
      * @param transMode 【必选】传输模式，基于LAN传输：lan；基于LAN加密传输：lanssl。
      * @return {@code FCSDKResponse<VRMTask>} 准备备份资源任务信息。
      * @since  eSDK Cloud V100R005C00
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> createBackupResource(String volUri, Integer delay, String taskType, String ip,
         String snapUrn1, String snapUrn2, String volCBTCreateTime, String transMode);
@@ -77,8 +75,6 @@ public interface BackupOperationResource
      * @param taskId 【必选】准备备份资源接口返回的任务ID，需要从准备备份资源接口返回的任务URI中获取ID，例如："taskUri":"/service/sites/4D9D0815/tasks/4962"，那么taskId为4962。
      * @return {@code FCSDKResponse<BackupResource>} 备份资源信息。
      * @since  eSDK Cloud V100R005C00
-     * @uri
-     * @code
      */
     public FCSDKResponse<BackupResource> queryBackupResource(String volUri, String taskId);
     
@@ -86,7 +82,7 @@ public interface BackupOperationResource
      * 
      * 修改备份资源<br>
      * 注：1、非商用，仅供内部调测使用<br>
-     * &nbsp;&nbsp;&nbsp;&nbsp 2、暂只支持修改loadRes使用延时时间，该备份资源最大存在7200秒，该接口输入的delay值加上备份资源的剩余delay值不能超过7200秒。
+     * &nbsp;&nbsp;&nbsp;&nbsp; 2、暂只支持修改loadRes使用延时时间，该备份资源最大存在7200秒，该接口输入的delay值加上备份资源的剩余delay值不能超过7200秒。
      * <p><b>代码示例：</b></p>
      * &nbsp;&nbsp;&nbsp;&nbsp;SDKCommonResp resp = instance.modifyBackupResource("/service/sites/4D9D0815/volumes/394", "6127", 1200);
      * <p> 
@@ -96,8 +92,6 @@ public interface BackupOperationResource
      * @param delay 【必选】loadRes使用延时，单位秒，范围60~7200秒，其他范围会导致备份失败。
      * @return {@code SDKCommonResp} 修改备份资源返回信息。
      * @since  eSDK Cloud V100R005C00
-     * @uri
-     * @code
      */
     public SDKCommonResp modifyBackupResource(String volUri, String taskId, Integer delay);
     
@@ -113,8 +107,6 @@ public interface BackupOperationResource
      * @param taskId 【必选】准备备份资源接口返回的任务ID，需要从准备备份资源接口返回的任务URI中获取ID，例如："taskUri":"/service/sites/4D9D0815/tasks/4962"，那么taskId为4962。
      * @return {@code SDKCommonResp} 释放备份资源返回信息。
      * @since  eSDK Cloud V100R005C00
-     * @uri
-     * @code
      */
     public SDKCommonResp deleteBackupResource(String volUri, String taskId);
     
@@ -135,8 +127,6 @@ public interface BackupOperationResource
      * @param blockNum 【可选】block数量，当blockNum或者startBlock不填时，则获取整个文件的位图信息，当startBlock字段和blockNum字段都填写时，该字段值需要为8的倍数。
      * @return {@code FCSDKResponse<VMVolumeCBT>}  查询虚拟机卷CBT差量位图返回信息。
      * @since  eSDK Cloud V100R005C00
-     * @uri
-     * @code
      */
     public FCSDKResponse<VMVolumeCBT> queryVMVolumeCBT(String volUri, String type, String snapUuid,
         String volCBTCreateTime, String chgID, Integer startBlock, Integer blockNum);

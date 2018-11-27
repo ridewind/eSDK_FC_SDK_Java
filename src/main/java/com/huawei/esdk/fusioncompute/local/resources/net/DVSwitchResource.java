@@ -56,8 +56,6 @@ public interface DVSwitchResource
      * @param name 【可选】DVSwitch名称，支持模糊查询，不区分大小写，值不能为null或""。
      * @return {@code FCSDKResponse<List<DvSwitchBasicInfo>>} 查询站点下所有DVSwitch信息响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<List<DvSwitchBasicInfo>> queryDVSwitchs(String siteUri, String location, String name);
     
@@ -70,8 +68,6 @@ public interface DVSwitchResource
      * @param dvswitchUri 【必选】DVSwitch URI。
      * @return {@code FCSDKResponse<QueryDVSwitchResp>} 查询服务器指定的DVSwitch信息响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<QueryDVSwitchResp> queryDVSwitch(String dvswitchUri);
     
@@ -92,8 +88,6 @@ public interface DVSwitchResource
      * @param addVlanpoolReq 【必选】增加DVSwitch的vlans请求信息。
      * @return {@code SDKCommonResp} 增加DVSwitch的vlans响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public SDKCommonResp addVlanpool(String dvswitchUri, AddVlanpoolReq addVlanpoolReq);
     
@@ -108,14 +102,12 @@ public interface DVSwitchResource
      * &nbsp;&nbsp;&nbsp;&nbsp;vps.add(vp);<br>
      * &nbsp;&nbsp;&nbsp;&nbsp;RemoveVlanpoolReq req = new RemoveVlanpoolReq();<br> 
      * &nbsp;&nbsp;&nbsp;&nbsp;req.setVlanPoolSet(vps);<br> 
-     * &nbsp;&nbsp;&nbsp;&nbsp;FCSDKResponse<VRMTask> resp = instance.removeVlanpool("/service/sites/3CD306E7/dvswitchs/3", req);<br>
+     * &nbsp;&nbsp;&nbsp;&nbsp;FCSDKResponse&lt;VRMTask&gt; resp = instance.removeVlanpool("/service/sites/3CD306E7/dvswitchs/3", req);<br>
      *   
      * @param dvswitchUri 【必选】DVSwitch URI。
      * @param removeVlanpoolReq 【必选】删除DVSwitch的vlans请求信息。
      * @return {@code FCSDKResponse<VRMTask>} 删除DVSwitch的vlans响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> removeVlanpool(String dvswitchUri, RemoveVlanpoolReq removeVlanpoolReq);
     
@@ -136,8 +128,6 @@ public interface DVSwitchResource
      * @param addVxlanpoolReq 【必选】增加DVSwitch的vxlans请求信息。
      * @return {@code SDKCommonResp} 增加DVSwitch的vxlans响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public SDKCommonResp addVxlanpool(String dvswitchUri, AddVxlanpoolReq addVxlanpoolReq);
     
@@ -158,8 +148,6 @@ public interface DVSwitchResource
      * @param removeVxlanpoolReq 【必选】删除DVSwitch的vxlans请求信息。
      * @return {@code SDKCommonResp} 删除DVSwitch的vxlans响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public SDKCommonResp removeVxlanpool(String dvswitchUri, RemoveVxlanpoolReq removeVxlanpoolReq);
     
@@ -184,8 +172,6 @@ public interface DVSwitchResource
      * @param modifyVtepReq 【必选】更新VXLAN VTEP请求信息。
      * @return {@code FCSDKResponse<VRMTask>} 更新VXLAN VTEP响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> modifyVtep(String siteUri, ModifyVtepReq modifyVtepReq);
 }

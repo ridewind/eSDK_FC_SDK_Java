@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
  * 过滤分页查询图形处理器信息响应信息。
- * <一句话功能简述>
+ * <p><b>一句话功能简述</b></p>
  * <p>
  * @since eSDK Cloud V100R003C30
  */

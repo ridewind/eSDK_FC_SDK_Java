@@ -55,8 +55,6 @@ public interface VSPResource
      * @param queryVSPReqEx 【必选】查询虚拟交换端口请求。
      * @return {@code FCSDKResponse<PageList<VSP>>} 查询虚拟交换端口响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<PageList<VSP>> queryVSP(String siteUri, QueryVSPReqEx queryVSPReqEx);
     
@@ -70,8 +68,6 @@ public interface VSPResource
      * @param vlanId    【必选】Vlan号，取值范围0 ~ 4094。
      * @return {@code FCSDKResponse<QueryVspsCountResp>}根据VLANID查询虚拟交换端口数量响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<QueryVspsCountResp> queryVspsCount(String siteUri, Integer vlanId);
     
@@ -89,8 +85,6 @@ public interface VSPResource
      * @param bindIpMacReq   【必选】配置VM网卡IP和MAC地址绑定请求。
      * @return {@code FCSDKResponse<VRMTask>}配置VM网卡IP和MAC地址绑定响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> bindIpMac(String vmNicId, BindIpMacReq bindIpMacReq);
     
@@ -104,8 +98,6 @@ public interface VSPResource
      * @param vmNicId   【必选】虚拟机网卡标识。
      * @return {@code FCSDKResponse<VRMTask>}取消VM网卡IP和MAC地址绑定响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> unBindIpMac(String vmNicId);
 }

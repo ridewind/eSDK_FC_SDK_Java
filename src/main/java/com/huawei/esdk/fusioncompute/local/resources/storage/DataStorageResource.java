@@ -51,8 +51,6 @@ public interface DataStorageResource
      * @param datastoreQueryParams 【必选】数据存储查询消息。
      * @return {@code FCSDKResponse<PageList<Datastore>>} 分页查询站点/主机/集群下所有数据存储响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<PageList<Datastore>> queryDataStores(String siteUri, DatastoreQueryParams datastoreQueryParams);
     
@@ -71,8 +69,6 @@ public interface DataStorageResource
      * @param availableDatastoreQueryParams 【必选】数据存储查询消息。
      * @return {@code FCSDKResponse<PageList<Datastore>>} 分页查询集群/主机下可模板部署的所有数据存储响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<PageList<Datastore>> queryAvailableDatastore(String siteUri,
         AvailableDatastoreQueryParams availableDatastoreQueryParams);
@@ -86,8 +82,6 @@ public interface DataStorageResource
      * @param datastoreUri 【必选】数据存储URI。
      * @return {@code FCSDKResponse<Datastore>} 查询指定数据存储响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<Datastore> queryDataStore(String datastoreUri);
     

@@ -16,8 +16,8 @@ package com.huawei.esdk.fusioncompute.local.model.cluster;
 
 
 /**
- * DRS高级选项配置信息
  * <table border=1>
+ *  <caption>DRS高级选项配置信息</caption>
  *  <tr>
  *      <td>
  *          选项名称

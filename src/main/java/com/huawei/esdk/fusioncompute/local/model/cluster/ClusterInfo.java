@@ -94,7 +94,7 @@ public class ClusterInfo
     
     /**
      * 查询cluster统计信息uri地址<br>
-     * 格式为：< cluster_uri>/statistics，如：“/service/sites/3EB607A6/clusters/366/statistics”<br>
+     * 格式为：&lt;cluster_uri&gt;/statistics，如：“/service/sites/3EB607A6/clusters/366/statistics”<br>
      * 注：该字段仅在查询时返回。
      */
     private String statistics;

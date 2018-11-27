@@ -42,8 +42,6 @@ public interface SiteResource
      * 查询所有站点信息。
      * @return {@code FCSDKResponse<SiteBasicInfo>} 站点列表。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<List<SiteBasicInfo>> querySites();
 }

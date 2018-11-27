@@ -55,8 +55,6 @@ public interface EquipmentResource
      * @param addNicReq 【必选】虚拟机添加网卡请求消息。
      * @return {@code FCSDKResponse<VRMTask>} 添加网卡任务。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> addNic(String vmUri, AddNicReq addNicReq);
     
@@ -71,8 +69,6 @@ public interface EquipmentResource
      * @param nicId 【必选】网卡ID。
      * @return {@code FCSDKResponse<VRMTask>} 删除网卡任务。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> removeNic(String vmUri, String nicId);
     
@@ -91,8 +87,6 @@ public interface EquipmentResource
      * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 若携带，不能与现有总线类型的重复，否则失败。
      * @return {@code FCSDKResponse<VRMTask>} 挂载卷任务。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> attachVolume(String vmUri, String volUrn, String pciType, Integer sequenceNum);
     
@@ -108,8 +102,6 @@ public interface EquipmentResource
      * @param isFormat 【可选】是否格式化磁盘，true：格式化，false：不格式化（默认）。
      * @return {@code FCSDKResponse<VRMTask>} 卸载卷任务。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> detachVolume(String vmUri, String volUrn, Boolean isFormat);
     
@@ -127,8 +119,6 @@ public interface EquipmentResource
      * @param attachCdRom 【必选】挂载光驱请求消息。
      * @return {@code FCSDKResponse<VRMTask>} 挂载光驱任务。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> attachCdRom(String vmUri, AttachCdRom attachCdRom);
     
@@ -142,8 +132,6 @@ public interface EquipmentResource
      * @param vmUri 【必选】虚拟机URI。
      * @return {@code FCSDKResponse<VRMTask>} 卸载光驱任务。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> detachCdRom(String vmUri);
     
@@ -157,8 +145,6 @@ public interface EquipmentResource
      * @param vmUri 【必选】虚拟机URI。
      * @return {@code FCSDKResponse<QueryCdRomResp>} 查询光驱响应消息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<QueryCdRomResp> queryCdRom(String vmUri);
     
@@ -171,8 +157,6 @@ public interface EquipmentResource
      * @param vmUri 【必选】虚拟机URI。
      * @return {@code FCSDKResponse<VRMTask>} 挂载tools任务。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> installTools(String vmUri);
     
@@ -185,8 +169,6 @@ public interface EquipmentResource
      * @param vmUri 【必选】虚拟机URI。
      * @return {@code FCSDKResponse<VRMTask>} 卸载tools任务。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> uninstallTools(String vmUri);
     
@@ -204,8 +186,6 @@ public interface EquipmentResource
      * @param neutronPortId 【可选】neutron port标识
      * @return {@code SDKCommonResp} 修改网卡属性响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public SDKCommonResp modifyNic(String vmNicUri, String name, String portGroupUrn, String mac,String neutronPortId);
     
@@ -220,8 +200,6 @@ public interface EquipmentResource
      * @param virtIo 【必选】网卡类型： 0: HW_X_NET (默认值)，1: HW_V_NET，不携带使用默认值。
      * @return {@code SDKCommonResp} 批量修改网卡属性响应信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public SDKCommonResp modifyNics(String vmUri, Integer virtIo);
     
@@ -232,8 +210,6 @@ public interface EquipmentResource
      * @param gpuUrn 【必选】GPU URI。
      * @return {@code SDKCommonResp}
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     //    public SDKCommonResp attachGpu(String vmUri, String gpuUrn);
     
@@ -246,8 +222,6 @@ public interface EquipmentResource
      * @param isBindingHost 【可选】是否保留绑定主机属性，默认是true。
      * @return {@code SDKCommonResp}
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     //    public SDKCommonResp detachGpu(String vmUri, String gpuUrn, Boolean isBindingHost);
     
@@ -258,8 +232,6 @@ public interface EquipmentResource
      * @param reqEx 【可选】请求URL信息。
      * @return {@code FCSDKResponse<ListGpusResp>}
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     //    public FCSDKResponse<ListGpusResp> listGpus(String siteUri, ListGpusReqEx reqEx);
     
@@ -269,8 +241,6 @@ public interface EquipmentResource
      * @param gpuUri 【必选】GPU URI。
      * @return {@code FCSDKResponse<GpuInfo>}
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     //    public FCSDKResponse<GpuInfo> queryGpu(String gpuUri);
     

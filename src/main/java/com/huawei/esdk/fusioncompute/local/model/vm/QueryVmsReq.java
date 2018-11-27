@@ -131,8 +131,8 @@ public class QueryVmsReq
      * uri、urn、uuid、name、description、group、location、locationName、hostUrn（主机容灾返回可用Writeagent的主机标识）<br>
      * clusterUrn、status、idle、pvDriverStatus、toolInstallStatus、cdRomStatus、isTemplate、isLinkClone、createTime<br>
      * imcSetting、minCompatibleimcSetting 、toolsVersion 、isBindingHost、hostName、clusterName、drStatus、vmType<br>
-     * rpoStatus、initSyncStatus、vmconfig –>nics（网卡信息中仅MAC 、sequenceNum 、ip 、ipList、ips6基本信息为有效值，其他为无效值）<br>
-     * vmconfig –>properties ->secureVmType<br>
+     * rpoStatus、initSyncStatus、vmconfig &rarr;nics（网卡信息中仅MAC 、sequenceNum 、ip 、ipList、ips6基本信息为有效值，其他为无效值）<br>
+     * vmconfig &rarr;properties &rarr;secureVmType<br>
      * 2：返回所有信息，响应中各虚拟机属性同查询指定虚拟机信息，但不包含：<br>
      * drDrillVmUri、drDrillVmUrn。
      */

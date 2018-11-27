@@ -63,8 +63,6 @@ public interface MonitorResource
      * @param queryObjectmetricReq 【必选】查询该对象的性能指标数据请求消息。
      * @return {@code FCSDKResponse<QueryObjectmetricResp>} 查询该对象的性能指标数据返回信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<QueryObjectmetricResp> queryObjectmetricRealtimedata(String siteUri,
         List<QueryObjectmetricReq> queryObjectmetricReq);
@@ -89,8 +87,6 @@ public interface MonitorResource
      * @param queryObjectmetricCurvedataReq 【必选】查询对象的历史监控数据请求消息。
      * @return {@code FCSDKResponse<QueryObjectmetricCurvedataResp>} 查询对象的历史监控数据返回信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<QueryObjectmetricCurvedataResp> queryObjectmetricCurvedata(String siteUri,
         List<QueryObjectmetricCurvedataReq> queryObjectmetricCurvedataReq);
@@ -120,8 +116,6 @@ public interface MonitorResource
      * @param queryTopoStatisticReq 【必选】查询对象的TOP监控数据请求消息。
      * @return {@code FCSDKResponse<QueryTopoStatisticResp>} 查询对象的TOP监控数据返回信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<QueryTopoStatisticResp> queryTopoStatistic(String siteUri,
         List<QueryTopoStatisticReq> queryTopoStatisticReq);
@@ -136,8 +130,6 @@ public interface MonitorResource
      * @param siteUri 【必选】站点URI。
      * @return {@code FCSDKResponse<QuerySysCurrentTimeResp>} 获取系统当前时间返回信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<QuerySysCurrentTimeResp> querySysCurrentTime(String siteUri);
     

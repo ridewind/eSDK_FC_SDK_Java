@@ -115,6 +115,7 @@ public class LogUtil
     // 源端设备 发送消息设备/模块的唯一标识字符串，一般是IP地址，本地调用时填空
     /**
      * 根据系统的类型获取本服务器的ip地址
+     * @return
      */
     public static String getSystemLocalIp()
     {
@@ -130,6 +131,8 @@ public class LogUtil
     
     /**
      * 根据URL获取ip地址
+     * @param url
+     * @return
      */
     public static String getDestinationIp(String url)
     {

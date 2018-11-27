@@ -42,12 +42,12 @@ public class ModifyHostReq
     private String bmcIp;
     
     /**
-     * 【可选】bmc帐号，不支持以下字符：&|;<>-/$。
+     * 【可选】bmc帐号，不支持以下字符：&amp;|;&lt;&gt;-/$。
      */
     private String bmcUserName;
     
     /**
-     * 【可选】bmc密码，不支持以下字符：&|;<>-/$。
+     * 【可选】bmc密码，不支持以下字符：&amp;|;&lt;&gt;-/$。
      */
     private String bmcPassword;
     

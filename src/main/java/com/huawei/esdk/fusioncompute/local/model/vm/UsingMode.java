@@ -16,7 +16,7 @@ package com.huawei.esdk.fusioncompute.local.model.vm;
 
 /**
  * GPU使用方式。
- * <一句话功能简述>
+ * <p><b>一句话功能简述</b></p>
  * <p>
  * @since eSDK Cloud V100R003C30
  */

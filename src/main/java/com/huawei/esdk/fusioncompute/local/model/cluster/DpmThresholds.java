@@ -21,7 +21,7 @@ package com.huawei.esdk.fusioncompute.local.model.cluster;
  * 随电源管理阈值等级的提升，轻载阈值/重载阈值的大小关系递增。
  * <p><b>示例：</b></p>
  * &nbsp;&nbsp;&nbsp;&nbsp;   DRSSetting drs = new DRSSetting();<br>
- * &nbsp;&nbsp;&nbsp;&nbsp;   List<DpmThresholds> ldrs = new ArrayList<DpmThresholds>();<br>
+ * &nbsp;&nbsp;&nbsp;&nbsp;   List&lt;DpmThresholds&gt; ldrs = new ArrayList&lt;DpmThresholds&gt;();<br>
  * &nbsp;&nbsp;&nbsp;&nbsp;   DpmThresholds dpm1 = new DpmThresholds();<br>
  * &nbsp;&nbsp;&nbsp;&nbsp;   dpm1.setLimen(1);<br>
  * &nbsp;&nbsp;&nbsp;&nbsp;   dpm1.setOverloadThreshold(63);<br>

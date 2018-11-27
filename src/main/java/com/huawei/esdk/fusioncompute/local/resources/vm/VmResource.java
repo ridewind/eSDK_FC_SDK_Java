@@ -255,7 +255,7 @@ public interface VmResource
 	 * <p>
 	 * <b>代码示例：</b>
 	 * </p>
-	 * &nbsp;&nbsp;&nbsp;&nbsp; List&lt;MigrateVmVol> disks = new ArrayList&lt;MigrateVmVol>();<br>
+	 * &nbsp;&nbsp;&nbsp;&nbsp; List&lt;MigrateVmVol&gt; disks = new ArrayList&lt;MigrateVmVol&gt;();<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; MigrateVmVol vmVol = new MigrateVmVol();<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; vmVol.setDatastoreUrn("urn:sites:400E07BB:datastores:2");<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; vmVol.setMigrateType(0);<br>
@@ -335,14 +335,14 @@ public interface VmResource
 	 * &nbsp;&nbsp;&nbsp;&nbsp; di.setIsDataCopy(true);<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; di.setIsThin(false);<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; di.setVolType(0);<br>
-	 * &nbsp;&nbsp;&nbsp;&nbsp; List&lt;Disk> ld = new ArrayList&lt;Disk>();<br>
+	 * &nbsp;&nbsp;&nbsp;&nbsp; List&lt;Disk&gt; ld = new ArrayList&lt;Disk&gt;();<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; ld.add(di);<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; vc.setDisks(ld);<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; Nic nic = new Nic();<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; nic.setSequenceNum(0);<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; nic.setPortGroupUrn("urn:sites:3CD306E7:dvswitchs:1:portgroups:1");<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; nic.setVirtIo(0);<br>
-	 * &nbsp;&nbsp;&nbsp;&nbsp; List&lt;Nic> lc = new ArrayList&lt;Nic>();<br>
+	 * &nbsp;&nbsp;&nbsp;&nbsp; List&lt;Nic&gt; lc = new ArrayList&lt;Nic&gt;();<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; lc.add(nic);<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; vc.setNics(lc);<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; req.setVmConfig(vc);<br>
@@ -354,7 +354,7 @@ public interface VmResource
 	 * &nbsp;&nbsp;&nbsp;&nbsp; item.setPath("test-1.vhd");<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; item.setDeviceId("ovf:/disk/1");<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; item.setSize(1L);<br>
-	 * &nbsp;&nbsp;&nbsp;&nbsp; List&lt;FileItem> li = new ArrayList&lt;FileItem>();<br>
+	 * &nbsp;&nbsp;&nbsp;&nbsp; List&lt;FileItem&gt; li = new ArrayList&lt;FileItem&gt;();<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; li.add(item);<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; req.setFileItems(li);<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; req.setUrl("C:\\Users\\xxx\\Desktop\\test.ova");<br>
@@ -499,7 +499,7 @@ public interface VmResource
 	 * &nbsp;&nbsp;&nbsp;&nbsp; vmCustomization.setDescription("test");<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; vmCustomization.setHostname("vm1");<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; vmCustomization.setWorkgroup("asdz");<br>
-	 * &nbsp;&nbsp;&nbsp;&nbsp; List&lt;NicSpecification> nics = new ArrayList&lt;NicSpecification>();<br>
+	 * &nbsp;&nbsp;&nbsp;&nbsp; List&lt;NicSpecification&gt; nics = new ArrayList&lt;NicSpecification&gt;();<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; NicSpecification nicSpecification = new NicSpecification();<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; nicSpecification.setSequenceNum(1);<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp; nics.add(nicSpecification);<br>

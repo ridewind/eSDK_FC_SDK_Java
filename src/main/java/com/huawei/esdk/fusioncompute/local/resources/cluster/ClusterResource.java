@@ -45,7 +45,7 @@ public interface ClusterResource
      * 
      * 查询集群列表 。
      * <p><b>代码示例：</b></p><br>
-     * &nbsp;&nbsp;&nbsp;&nbsp;   List&lt;String> clusterUrns = new ArrayList&lt;String>();<br> 
+     * &nbsp;&nbsp;&nbsp;&nbsp;   List&lt;String&gt; clusterUrns = new ArrayList&lt;String&gt;();<br> 
      * &nbsp;&nbsp;&nbsp;&nbsp;   clusterUrns.add("urn:sites:3EB607A6:clusters:10");<br>
      * &nbsp;&nbsp;&nbsp;&nbsp;   FCSDKResponse&lt;List&lt;ClusterBasicInfo&gt;&gt; resp = service.queryClusters("/service/sites/3EB607A6", null, null, "urn:sites:2DEF0634:folders:722", clusterUrns);<br>
      * 
@@ -56,8 +56,6 @@ public interface ClusterResource
      * @param clusterUrns 【可选】待查询的集群urn列表。
      * @return {@code FCSDKResponse<List<ClusterBasicInfo>>} 查询集群列表响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<List<ClusterBasicInfo>> queryClusters(String siteUri, String tag, String name,
         String parentObjUrn, List<String> clusterUrns);
@@ -67,13 +65,11 @@ public interface ClusterResource
      * 查询集群详情 。
      * <p><b>代码示例：</b></p><br>
      * &nbsp;&nbsp;&nbsp;&nbsp;   String clusterUri = "/service/sites/3EB607A6/clusters/366";<br> 
-     * &nbsp;&nbsp;&nbsp;&nbsp;   FCSDKResponse&lt;ClusterInfo> resp = service.queryCluster(clusterUri);<br> 
+     * &nbsp;&nbsp;&nbsp;&nbsp;   FCSDKResponse&lt;ClusterInfo&gt; resp = service.queryCluster(clusterUri);<br> 
      * 
      * @param clusterUri 【必选】集群URI。
      * @return {@code FCSDKResponse<ClusterInfo>} 查询集群详情响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<ClusterInfo> queryCluster(String clusterUri);
     
@@ -82,13 +78,11 @@ public interface ClusterResource
      * 查询集群内计算资源统计信息 。
      * <p><b>代码示例：</b></p><br>
      * &nbsp;&nbsp;&nbsp;&nbsp;   String clusterUri = "/service/sites/3EB607A6/clusters/366";<br> 
-     * &nbsp;&nbsp;&nbsp;&nbsp;   FCSDKResponse&lt;ComputeResource> resp = service.queryComputeResource(clusterUri);<br>
+     * &nbsp;&nbsp;&nbsp;&nbsp;   FCSDKResponse&lt;ComputeResource&gt; resp = service.queryComputeResource(clusterUri);<br>
      *   
      * @param clusterUri 【必选】集群URI。
      * @return {@code FCSDKResponse<ComputeResource>} 查询集群内计算资源统计信息响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<ComputeResource> queryComputeResource(String clusterUri);
     
@@ -235,8 +229,6 @@ public interface ClusterResource
      * @param clusterInfo 【必选】集群信息。
      * @return {@code FCSDKResponse<VRMTask>} 创建集群响应消息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> createCluster(String siteUri, ClusterInfo clusterInfo);
     
@@ -252,8 +244,6 @@ public interface ClusterResource
      * @param clusterInfo 【必选】集群信息。
      * @return {@code SDKCommonResp} 修改集群响应消息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public SDKCommonResp modifyCluster(String clusterUri, ClusterInfo clusterInfo);
     
@@ -266,8 +256,6 @@ public interface ClusterResource
      * @param clusterUri 【必选】集群URI。
      * @return {@code SDKCommonResp} 删除指定集群响应消息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public SDKCommonResp removeCluster(String clusterUri);
     

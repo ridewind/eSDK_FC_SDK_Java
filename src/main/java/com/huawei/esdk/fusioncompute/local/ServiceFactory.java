@@ -103,8 +103,6 @@ public class ServiceFactory
      * @param clientProviderBean 【必选】服务器端配置信息。
      * @return Class 接口实现。
      * @since eSDK Cloud V100R003C30
-     * @uri
-     * @code
      */
     @SuppressWarnings({"unchecked"})
     public static <T> T getService(Class<? extends T> interfaceClass, ClientProviderBean clientProviderBean)

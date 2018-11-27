@@ -57,8 +57,6 @@ public interface AlarmResource
      * @param siteUri 【必选】站点URI。
      * @return {@code FCSDKResponse<PageList<Alarm>>} 查询活动告警响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<PageList<Alarm>> queryActiveAlarms(ActiveAlarmQueryParams queryActiveAlarmsReq, String siteUri);
     
@@ -75,8 +73,6 @@ public interface AlarmResource
      * @param siteUri 【必选】站点URI。
      * @return {@code FCSDKResponse<PageList<HistoryAlarm>>} 查询历史告警响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<PageList<HistoryAlarm>> queryHistoryAlarms(HistoryAlarmQueryParams queryHistoryAlarmsReq,
         String siteUri);
@@ -95,8 +91,6 @@ public interface AlarmResource
      * @param siteUri 【必选】站点URI。
      * @return {@code FCSDKResponse<PageList<Event>>} 查询事件列表功能响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<PageList<Event>> queryEvents(EventQueryParams eventQueryParams, String siteUri);
     
@@ -110,8 +104,6 @@ public interface AlarmResource
      * @param siteUri 【必选】站点URI。
      * @return {@code FCSDKResponse<QueryThresholdsResp>}查询所有阈值项返回信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<QueryThresholdsResp> queryThresholds(String siteUri);
     
@@ -137,8 +129,6 @@ public interface AlarmResource
      * @param modifyThresholdReq 【必选】修改阈值项请求信息。
      * @return {@code FCSDKResponse<ModifyThresholdResp>}修改阈值项返回信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<ModifyThresholdResp> modifyThreshold(String siteUri, ModifyThresholdReq modifyThresholdReq);
 }

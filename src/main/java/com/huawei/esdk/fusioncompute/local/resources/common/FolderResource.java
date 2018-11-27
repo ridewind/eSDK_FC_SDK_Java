@@ -72,7 +72,7 @@ public interface FolderResource
      * &nbsp;&nbsp;&nbsp;&nbsp;modifyFolderReq.setParentObjUrn("urn:sites:459208F0");<br>
      * &nbsp;&nbsp;&nbsp;&nbsp;SDKCommonResp resp = service.modifyFolder(folderUri, modifyFolderReq);
      * 
-     * @param siteUri 【必选】站点URI
+     * @param folderUri 【必选】文件夹URI
      * @param modifyFolderReq 【必选】修改文件夹请求参数
      * @return {@code SDKCommonResp} 创建文件夹响应
      * @since eSDK Cloud V200R001C00
@@ -84,13 +84,13 @@ public interface FolderResource
      * 移入文件夹。
      * <p><b>代码示例：</b></p><br>
      * &nbsp;&nbsp;&nbsp;&nbsp;String siteUri = "/service/sites/459208F0";<br> 
-     * &nbsp;&nbsp;&nbsp;&nbsp;List&lt;String> elementUrns = new ArrayList&lt;String>();<br> 
+     * &nbsp;&nbsp;&nbsp;&nbsp;List&lt;String&gt; elementUrns = new ArrayList&lt;String&gt;();<br> 
 	 * &nbsp;&nbsp;&nbsp;&nbsp;elementUrns.add("urn:sites:459208F0:vms:i-00000021");<br> 
 	 * &nbsp;&nbsp;&nbsp;&nbsp;IntoFolderReq intoFolderReq = new IntoFolderReq();<br> 
 	 * &nbsp;&nbsp;&nbsp;&nbsp;intoFolderReq.setElementType(1);<br> 
 	 * &nbsp;&nbsp;&nbsp;&nbsp;intoFolderReq.setElementUrns(elementUrns);<br> 
 	 * &nbsp;&nbsp;&nbsp;&nbsp;intoFolderReq.setParentFolderUrn("urn:sites:459208F0:folders:391");<br> 
-	 * &nbsp;&nbsp;&nbsp;&nbsp;FCSDKResponse&lt;IntoFolderInfo> resp = service.intoFolder(siteUri, intoFolderReq);<br> 
+	 * &nbsp;&nbsp;&nbsp;&nbsp;FCSDKResponse&lt;IntoFolderInfo&gt; resp = service.intoFolder(siteUri, intoFolderReq);<br> 
      * 
      * @param siteUri 【必选】站点URI
      * @param intoFolderReq 【必选】移入文件夹请求参数
@@ -117,7 +117,7 @@ public interface FolderResource
      * 查询文件夹。
      * <p><b>代码示例：</b></p><br>
      * &nbsp;&nbsp;&nbsp;&nbsp;String folderUri = "/service/sites/459208F0/folder/397";<br>
-     * &nbsp;&nbsp;&nbsp;&nbsp;FCSDKResponse&lt;FolderInfo> resp  = service.queryFolder(folderUri);<br> 
+     * &nbsp;&nbsp;&nbsp;&nbsp;FCSDKResponse&lt;FolderInfo&gt; resp  = service.queryFolder(folderUri);<br> 
      * 
      * @param folderUri 【必选】文件夹URI
      * @return {@code FCSDKResponse<FolderInfo>} 查询文件夹列表响应
@@ -131,7 +131,7 @@ public interface FolderResource
      * <p><b>代码示例：</b></p><br>
      * &nbsp;&nbsp;&nbsp;&nbsp;String parentObjUrn = "urn:sites:459208F0:folders:391";<br>
      * &nbsp;&nbsp;&nbsp;&nbsp;Integer type = 1;<br>
-     * &nbsp;&nbsp;&nbsp;&nbsp;FCSDKResponse&lt;List&lt;FolderInfo>> resp  = service.queryFolders("/service/sites/459208F0",parentObjUrn, type);<br> 
+     * &nbsp;&nbsp;&nbsp;&nbsp;FCSDKResponse&lt;List&lt;FolderInfo&gt;&gt; resp  = service.queryFolders("/service/sites/459208F0",parentObjUrn, type);<br> 
      * 
      * @param siteUri 【必选】站点URI
      * @param parentObjUrn 【可选】目标父对象URN，站点或文件夹，默认查询站点下第一级文件夹
@@ -145,7 +145,7 @@ public interface FolderResource
 	 * 查询指定文件夹(包括子文件夹内)包含所有虚拟机的硬件分配情况的汇总信息。
 	 * <p><b>代码示例：</b></p><br> 
 	 * &nbsp;&nbsp;&nbsp;&nbsp;String folderUri = "/service/sites/459208F0/folder/391";<br> 
-	 * &nbsp;&nbsp;&nbsp;&nbsp;FCSDKResponse&lt;FolderVMInfo> resp = service.queryFolderVMInfo(folderUri);<br> 
+	 * &nbsp;&nbsp;&nbsp;&nbsp;FCSDKResponse&lt;FolderVMInfo&gt; resp = service.queryFolderVMInfo(folderUri);<br> 
 	 * 
 	 * @param folderUri 【必选】文件夹URI
 	 * @return {@code FCSDKResponse<FolderInfo>} 查询指定文件夹(包括子文件夹内)包含所有虚拟机的硬件分配情况的汇总信息响应

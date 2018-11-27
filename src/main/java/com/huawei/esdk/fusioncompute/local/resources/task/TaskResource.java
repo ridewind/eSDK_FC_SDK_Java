@@ -44,8 +44,6 @@ public interface TaskResource
      * @param taskUri 【必选】任务URI。
      * @return {@code FCSDKResponse<TaskInfo>}
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<TaskInfo> queryTask(String taskUri);
     
@@ -57,8 +55,6 @@ public interface TaskResource
      * @param taskUri 【必选】任务URI。
      * @return {@code SDKCommonResp}
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public SDKCommonResp cancel(String taskUri);
 }

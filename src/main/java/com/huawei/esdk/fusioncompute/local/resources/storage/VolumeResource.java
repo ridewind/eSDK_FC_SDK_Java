@@ -65,8 +65,6 @@ public interface VolumeResource
      * @param volumeCreateParams 【必选】卷创建参数。
      * @return {@code FCSDKResponse<VRMTask>} 创建卷响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> createVolume(String siteUri, VolumeCreateParams volumeCreateParams);
     
@@ -81,8 +79,6 @@ public interface VolumeResource
      * @param isOnlyDelDB 【可选】0:正常删除流程，1:仅删除数据库（isFormat无效）；仅支持DSware存储，卷无快照场景。 
      * @return {@code FCSDKResponse<VRMTask>} 删除卷响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> removeVolume(String volumeUri, Integer isFormat, Integer isOnlyDelDB);
     
@@ -99,8 +95,6 @@ public interface VolumeResource
      * @param volumeQueryParams 【必选】卷查询参数。
      * @return {@code FCSDKResponse<PageList<Volume>>} 分页查询卷响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<PageList<Volume>> queryVolumes(String siteUri, VolumeQueryParams volumeQueryParams);
     
@@ -114,8 +108,6 @@ public interface VolumeResource
      * @param refreshFlag 【可选】是否刷新快照信息，默认为false。
      * @return {@code FCSDKResponse<Volume>} 查询指定卷响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<Volume> queryVolume(String volumeUri, Boolean refreshFlag);
     
@@ -132,8 +124,6 @@ public interface VolumeResource
      * @param resumeVolumeReq  【可选】恢复卷请求。
      * @return {@code FCSDKResponse<VRMTask>} 恢复卷响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     //    public FCSDKResponse<VRMTask> resumeVolume(String volumeUri, ResumeVolumeReq resumeVolumeReq);
     
@@ -150,8 +140,6 @@ public interface VolumeResource
      * @param migratevolumeReq  【必选】迁移卷请求。
      * @return {@code FCSDKResponse<VRMTask>} 迁移卷响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> migrateVolume(String volumeUri, MigratevolumeReq migratevolumeReq);
     
@@ -165,8 +153,6 @@ public interface VolumeResource
      * @param dsUrn 【必选】数据存储的urn。
      * @return {@code FCSDKResponse<PageList<QueryDatastoreVolumeResp>>} 分页根据DataStore查询所有卷响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<PageList<QueryDatastoreVolumeResp>> queryDatastoreVolumes(String siteUri, Integer limit,
         Integer offset, String dsUrn);
@@ -184,8 +170,6 @@ public interface VolumeResource
      * @param modifyIOpropertyOfVolumeReq   【必选】设置卷IO属性上限请求。
      * @return {@code FCSDKResponse<VRMTask>} 设置卷IO属性上限响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VRMTask> modifyIOpropertyOfVolume(String volumeUri,
         ModifyIOpropertyOfVolumeReq modifyIOpropertyOfVolumeReq);
@@ -200,7 +184,7 @@ public interface VolumeResource
      * &nbsp;&nbsp;&nbsp;&nbsp;   req.setHostId(65);<br>
      * &nbsp;&nbsp;&nbsp;&nbsp;   req.setMigrateType(0);<br>
      * &nbsp;&nbsp;&nbsp;&nbsp;   req.setSpeed(20);<br>
-     * &nbsp;&nbsp;&nbsp;&nbsp;   List<VolumeInfo> vols = new ArrayList<VolumeInfo>();<br>
+     * &nbsp;&nbsp;&nbsp;&nbsp;   List&lt;VolumeInfo&gt; vols = new ArrayList&lt;VolumeInfo&gt;();<br>
      * &nbsp;&nbsp;&nbsp;&nbsp;   VolumeInfo vol = new VolumeInfo();<br>
      * &nbsp;&nbsp;&nbsp;&nbsp;   vol.setDstDs("urn:sites:3EB607A6:datastores:3");<br>
      * &nbsp;&nbsp;&nbsp;&nbsp;   vol.setVolumeId("77");<br>
@@ -212,8 +196,6 @@ public interface VolumeResource
      * @param canMigratevolumeReq  【必选】迁移请求。
      * @return {@code FCSDKResponse<MigratevolumeResp>} 是否可以迁移响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<MigratevolumeResp> canMigratevol(String siteUri, CanMigratevolumeReq canMigratevolumeReq);
     
@@ -229,8 +211,6 @@ public interface VolumeResource
      * @param modifyVolumeReq 【必选】修改指定卷请求信息。
      * @return {@code SDKCommonResp} 修改指定卷响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public SDKCommonResp modifyVolume(String volumeUri, ModifyVolumeReq modifyVolumeReq);
     
@@ -245,8 +225,6 @@ public interface VolumeResource
      * @param name 【必选】备份卷名称，长度[1,256]。
      * @return {@code FCSDKResponse<BackupVolumeResp>} 创建卷备份响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     //    public FCSDKResponse<BackupVolumeResp> backupVolume(String volumeUri, String datastoreUrn, String name);
     
@@ -272,8 +250,6 @@ public interface VolumeResource
      * @param volumeUrn 【必选】目的卷标识。
      * @return  {@code SDKCommonResp} 交换源卷与目标卷的结果。
      * @since  eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public SDKCommonResp exchangeVolume(String volumeUri, String volumeUrn);
 }

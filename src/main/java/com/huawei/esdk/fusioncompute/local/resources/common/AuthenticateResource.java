@@ -41,14 +41,12 @@ public interface AuthenticateResource
      * 
      * 用户登录。
      * <p><b>代码示例：</b></p><br>
-     * &nbsp;&nbsp;&nbsp;&nbsp;   FCSDKResponse&lt;LoginResp> resp = service.login("admin", "Huawei@123");<br> 
+     * &nbsp;&nbsp;&nbsp;&nbsp;   FCSDKResponse&lt;LoginResp&gt; resp = service.login("admin", "Huawei@123");<br> 
      * 
      * @param userName 【必选】对接用户名。
      * @param password  【必选】对接用户密码。
      * @return {@code FCSDKResponse<LoginResp>} 用户登录响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<LoginResp> login(String userName, String password);
     
@@ -60,8 +58,6 @@ public interface AuthenticateResource
      * 
      * @return {@code SDKCommonResp} 用户退出响应。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public SDKCommonResp logout();
     
@@ -69,12 +65,10 @@ public interface AuthenticateResource
      * 
      * 查询当前系统支持的版本列表。
      * <p><b>代码示例：</b></p><br>
-     * &nbsp;&nbsp;&nbsp;&nbsp;   FCSDKResponse&lt;VersionInfo> resp = queryVersion();<br>  
+     * &nbsp;&nbsp;&nbsp;&nbsp;   FCSDKResponse&lt;VersionInfo&gt; resp = queryVersion();<br>  
      * 
      * @return {@code FCSDKResponse<VersionInfo>} 当前系统支持的版本列表信息。
      * @since eSDK Cloud V100R003C50
-     * @uri
-     * @code
      */
     public FCSDKResponse<VersionInfo> queryVersion();
 }
