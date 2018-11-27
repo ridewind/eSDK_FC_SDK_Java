@@ -7,15 +7,15 @@ import com.huawei.esdk.fusioncompute.local.resources.common.AuthenticateResource
 
 public class Test {
 	public static void main(String[] args) {
-	    //Éè¶¨·şÎñÆ÷ÅäÖÃ
+	    //è®¾å®šæœåŠ¡å™¨é…ç½®
 	    ClientProviderBean clientProvider = new ClientProviderBean();
-	    //Éè¶¨·şÎñÆ÷ÅäÖÃ_Éè¶¨·şÎñÆ÷IP
+	    //è®¾å®šæœåŠ¡å™¨é…ç½®_è®¾å®šæœåŠ¡å™¨IP
 	    clientProvider.setServerIp("172.22.32.56");
-	    //Éè¶¨·şÎñÆ÷ÅäÖÃ_Éè¶¨·şÎñÆ÷¶Ë¿ÚºÅ
+	    //è®¾å®šæœåŠ¡å™¨é…ç½®_è®¾å®šæœåŠ¡å™¨ç«¯å£å·
 	    clientProvider.setServerPort("7443");
-	    //³õÊ¼»¯ÓÃ»§×ÊÔ´ÊµÀı
+	    //åˆå§‹åŒ–ç”¨æˆ·èµ„æºå®ä¾‹
 	    AuthenticateResource auth = ServiceFactory.getService(AuthenticateResource.class, clientProvider);
-	    //ÒÔÓÃ»§Ãû£¬ÓÃ»§ÃÜÂë×÷Îª´«Èë²ÎÊı£¬µ÷ÓÃAuthenticateResourceÌá¹©µÄlogin·½·¨£¬Íê³ÉÓÃ»§µÄµÇÂ¼
+	    //ä»¥ç”¨æˆ·åï¼Œç”¨æˆ·å¯†ç ä½œä¸ºä¼ å…¥å‚æ•°ï¼Œè°ƒç”¨AuthenticateResourceæä¾›çš„loginæ–¹æ³•ï¼Œå®Œæˆç”¨æˆ·çš„ç™»å½•
 	    FCSDKResponse<LoginResp> resp = auth.login("test001", "Huawei@123");
 	}
 }
