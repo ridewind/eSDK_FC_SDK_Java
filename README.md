@@ -1,56 +1,51 @@
-## eSDK\_FC\_SDK\_Java  ##
-FusionCompute是云操作系统软件，主要负责硬件资源的虚拟化，以及对虚拟资源、业务资源、用户资源的集中管理。
-它采用虚拟计算、虚拟存储、虚拟网络等技术，完成计算资源、存储资源、网络资源的虚拟化。同时通过统一的接口，对这些虚拟资源进行集中调度和管理，从而降低业务的运行成本，保证系统的安全性和可靠性，协助运营商和企业构筑安全、绿色、节能的云数据中心能力。
+## eSDK\_FC\_SDK\_Java
+FusionCompute is a cloud operating system software that is responsible for the virtualization of hardware resources and centralized management of virtual resources, service resources, and user resources.
+It uses virtual computing, virtual storage, virtual network and other technologies to complete the virtualization of computing resources, storage resources, and network resources. At the same time, the virtual resources are centrally scheduled and managed through a unified interface, thereby reducing the running cost of the service, ensuring the security and reliability of the system, and assisting operators and enterprises to build a secure, green, and energy-efficient cloud data center capability.
 
+**FusionCompute Java SDK** provides FusionCompute's standardized interface based on JAVA language. It provides you with hardware resource virtualization and business integration capabilities for virtual resources, business resources, and centralized management of user resources.
 
-**FusionCompute Java SDK**提供FusionCompute基于JAVA语言的标准化接口。为您提供硬件资源虚拟化，以及对虚拟资源、业务资源、用户资源集中管理等业务集成能力。
-丰富的开放能力使得合作伙伴易于将云计算产品FusionCompute与行业的上层应用融合，为政府、交通、教育以及高端企业客户构建安全、便捷以及实用的云计算服务。
+## Version
+FusionCompute Java SDK latest version: v2.1.0
 
+## Development environment / compatibility
+- Source code: Java 1.6
+- Java Development Kit: 7u10,recommended version 1.7 and above
+- Tomcat: Tomcat 7.0 and above
 
-## 版本更新 ##
-FusionCompute Java SDK最新版本v2.1.00
+## Directory structure
+- Source code: `src/`
+- Sample code: `sample/`
+- Interface reference: `doc/`
 
-## 开发环境 ##
+## Getting started
+- You can generate a `*.jar` file by downloading the source code and running `mvn package`. The file will be generated in the `target/` directory.
+- Otherwise, if you use Maven to manage the dependencies in your Java project, add the following code to the `<dependencies>` section in your `pom.xml`.
 
-- 操作系统： Windows7专业版
-- Java Development Kit：7u10，推荐1.7及以上版本
-- Eclipse Java EE IDE for Web Developers：3.6.1 Helios Service Release 1，推荐3.6.1及以上版本。
-- Tomcat：Tomcat 7.0及以上版本
+```xml
+<dependency>
+    <groupId>com.huawei</groupId>
+    <artifactId>esdk-fusioncompute</artifactId>
+    <version>2.1.0</version>
+</dependency>
+```
 
+### User login
+The following code demonstrates how to log in to the FusionCompute system to help you quickly understand the capabilities of the FusionCompute Java SDK.
 
-## 文件指引 ##
-
-- src文件夹：eSDK\_FC\_SDK\_Java源码
-- sample文件夹：eSDK\_FC\_SDK\_Java的代码样例
-- doc：eSDK\_FC\_SDK\_Java的接口参考、开发指南
-- third-party:eSDK\_FC\_SDK\_Java中使用的第三方库
-
-
-## 入门指导 ##
-
-- 新建的工程“eSDK_Cloud_FC_Demo”,选择“Java Build Path > Libraries > Add External JARs”，导入SDK包.
-- 右键单击新建的工程“eSDK_Cloud_FC_Demo”，选择“Properties”，打开Properties界面。选择“Java Build Path > Libraries > Add External JARs”，导入第三方开源包，单击“OK”
-- 调用SDK提供的接口完成所需的业务需求。
-- 详细的开发指南请参考doc中的开发指南Hello World章节
-
-
-###用户登录###
-以下代码演示如何登入FusionCompute系统，帮助您快速了解FusionCompute Java SDK的能力
-
-	public static void main(String[] args) { 
-    //设定服务器配置 
+```java
+public static void main(String[] args) {
     ClientProviderBean clientProvider = new ClientProviderBean(); 
-    //设定服务器配置_设定服务器IP 
-    clientProvider.setServerIp("172.22.39.9"); 
-    //设定服务器配置_设定服务器端口号 
-    clientProvider.setServerPort("7443"); 
-    //初始化用户资源实例 
-    AuthenticateResource auth = ServiceFactory.getService(AuthenticateResource.class, clientProvider); 
-    //以用户名，用户密码作为传入参数，调用AuthenticateResource提供的login方法，完成用户的登录 
-    FCSDKResponse<LoginResp> resp = auth.login("admin", "Huawei@123"); 
+    clientProvider.setServerIp("172.22.39.9");
+    clientProvider.setProtocol(useHttps ? "https" : "http");
+    clientProvider.setServerPort(useHttps ? "7443" : "7070");
 
+    clientProvider.setVersion(6.1f);
+    clientProvider.setUserName(username);
 
+    AuthenticateResource auth = ServiceFactory.getService(AuthenticateResource.class, clientProvider);
+    FCSDKResponse<LoginResp> resp = auth.login(username, hashedPassword); // SHA-256
+}
+```
 
-## 获取帮助 ##
-
-在开发过程中，您有任何问题均可以至[DevCenter](https://devcenter.huawei.com)中提单跟踪。也可以在[华为开发者社区](http://developer.huawei.com/ict/cn/site-cloud/products/fusioncompute)中查找或提问。另外，华为技术支持热线电话：400-8828-000。华为技术支持邮箱：esdk@huawei.com
+## Get help
+During the development process, you can go to the [DevCenter](https://devcenter.huawei.com) and browse the docs. You can also find or ask questions in the [Huawei Developer Community](https://developer.huawei.com/ict/en/site-cloud/product/fusioncompute). In addition, there is the Huawei technical support hotline: 400-8828-000. Huawei technical support email: esdk@huawei.com
